@@ -48,6 +48,19 @@
     }
   });
 
+  // Mobile nav dropdown groups (Решения, Врачам)
+  document.addEventListener("click", function(e){
+    var toggle = e.target.closest("[data-mobile-toggle]");
+    if(!toggle) return;
+    var group = toggle.closest(".mobile-group");
+    if(!group) return;
+    var wasOpen = group.classList.contains("open");
+    group.parentElement.querySelectorAll(".mobile-group.open").forEach(function(g){
+      if(g !== group) g.classList.remove("open");
+    });
+    group.classList.toggle("open", !wasOpen);
+  });
+
   // FAQ accordion
   document.addEventListener("click", function(e){
     var q = e.target.closest(".faq-q");

@@ -189,6 +189,16 @@ p.body{ font-size: 15.5px; color:var(--ink-soft); max-width: 62ch; }
 .mobile-nav a.btn-primary{ color:#fff; }
 .mobile-nav a.btn-ghost{ color:var(--navy); }
 
+.mobile-nav .mobile-group{ border-bottom:1px solid var(--line); }
+.mobile-nav .mobile-group-toggle{ width:100%; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:14px 6px; font-size:19px; font-weight:650; color:var(--ink); background:none; border:none; cursor:pointer; font-family:inherit; text-align:left; }
+.mobile-nav .mobile-group-toggle svg{ width:13px; height:13px; opacity:.55; flex-shrink:0; transition: transform .18s var(--ease); }
+.mobile-nav .mobile-group.open .mobile-group-toggle svg{ transform: rotate(180deg); }
+.mobile-nav .mobile-submenu{ max-height:0; overflow:hidden; transition: max-height .22s var(--ease); }
+.mobile-nav .mobile-group.open .mobile-submenu{ max-height:640px; }
+.mobile-nav .mobile-submenu a{ padding:12px 6px 12px 18px; font-size:15.5px; font-weight:600; color:var(--ink-soft); border-bottom:none; }
+.mobile-nav .mobile-submenu a.mobile-submenu-all{ font-weight:700; color:var(--ink); }
+.mobile-nav .mobile-submenu a:last-child{ padding-bottom:16px; }
+
 /* ---- footer ---- */
 .site-footer{ background: var(--navy); color: rgba(255,255,255,.68); padding: 80px 0 32px; margin-top: 120px; }
 .footer-top{ display:grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 32px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,.14); }
