@@ -236,6 +236,8 @@ p.body{ font-size: 15.5px; color:var(--ink-soft); max-width: 62ch; }
 .breadcrumb{ font-size:13px; color: var(--ink-faint); display:flex; gap:8px; align-items:center; margin-bottom:20px; }
 .breadcrumb a{ color: var(--ink-faint); }
 .breadcrumb a:hover{ color: var(--navy); }
+.breadcrumb.on-dark, .breadcrumb.on-dark a{ color:rgba(255,255,255,.6); }
+.breadcrumb.on-dark a:hover{ color:#fff; }
 
 /* ---- crystal / molecular decorations ---- */
 .crystal-blob{ position:absolute; filter: blur(0px); opacity:.9; pointer-events:none; }
@@ -472,7 +474,8 @@ body.modal-open{ overflow:hidden; }
 .carousel-track::-webkit-scrollbar{ display:none; }
 .carousel-track > *{ scroll-snap-align:start; flex:0 0 320px; }
 .carousel-track.mini > *{ flex:0 0 210px; }
-@media (max-width:560px){ .carousel-track > *{ flex-basis:86%; } .carousel-track.mini > *{ flex-basis:56%; } }
+.carousel-track > .testimonial-card.video{ flex-basis:240px; }
+@media (max-width:560px){ .carousel-track > *{ flex-basis:86%; } .carousel-track.mini > *{ flex-basis:56%; } .carousel-track > .testimonial-card.video{ flex-basis:62%; } }
 
 .stars{ display:flex; gap:2px; margin-bottom:16px; }
 .stars svg{ width:14px; height:14px; color:#E8A93D; }
@@ -485,7 +488,7 @@ body.modal-open{ overflow:hidden; }
 .testimonial-card .doc span{ font-size:12.5px; color:var(--ink-faint); }
 
 .testimonial-card.video{ padding:0; overflow:hidden; }
-.testimonial-card.video .video-thumb{ position:relative; aspect-ratio:16/10; background:var(--accent-grad); display:flex; align-items:center; justify-content:center; cursor:pointer; }
+.testimonial-card.video .video-thumb{ position:relative; aspect-ratio:9/16; background:var(--accent-grad); display:flex; align-items:center; justify-content:center; cursor:pointer; }
 .testimonial-card.video .play-btn{ width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; border:none; cursor:pointer; box-shadow:var(--shadow); }
 .testimonial-card.video .play-btn svg{ width:18px; height:18px; color:var(--navy); margin-left:2px; }
 .testimonial-card.video .video-duration{ position:absolute; bottom:10px; right:10px; background:rgba(11,30,58,.65); color:#fff; font-size:11px; font-weight:650; padding:3px 8px; border-radius:6px; }
