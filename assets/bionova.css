@@ -291,13 +291,13 @@ p.body{ font-size: 15.5px; color:var(--ink-soft); max-width: 62ch; }
 .tl-step h3{ font-size:17px; margin-bottom:6px; }
 .tl-step p{ font-size:14.5px; color: var(--ink-soft); max-width:56ch; }
 
-.hz-timeline{ display:flex; gap:0; overflow-x:auto; padding-bottom:20px; scrollbar-width:thin; }
-.hz-step{ min-width:230px; flex:1; padding: 0 22px 0 0; position:relative; }
-.hz-step::before{ content:""; position:absolute; top:13px; left:0; right:0; height:2px; background: var(--line-strong); }
-.hz-step:first-child::before{ left:14px; }
+.hz-timeline{ display:grid; grid-template-columns:repeat(3, 1fr); gap:32px 24px; }
+.hz-step{ min-width:0; padding:0; position:relative; }
 .hz-step .dot{ width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; margin-bottom:16px; }
 .hz-step h4{ font-size:14.5px; margin-bottom:6px; }
 .hz-step p{ font-size:13px; color:var(--ink-faint); }
+@media (max-width:900px){ .hz-timeline{ grid-template-columns:repeat(2, 1fr); } }
+@media (max-width:560px){ .hz-timeline{ grid-template-columns:1fr; } }
 
 /* ---- FAQ accordion ---- */
 .faq{ border-top:1px solid var(--line); }
