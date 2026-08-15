@@ -374,6 +374,15 @@ table.spec tr:last-child td{ border-bottom:none; }
 .product-thumb svg{ width:40px; height:40px; color:var(--ink-faint); }
 .product-spec{ font-size:13px; font-weight:700; color:var(--ink); padding-top:14px; margin-bottom:18px; border-top:1px solid var(--line); }
 
+.product-mini-list{ display:flex; flex-direction:column; gap:14px; }
+.product-mini-card{ display:flex; align-items:center; gap:16px; padding:18px 20px; }
+.product-mini-card .product-thumb{ width:60px; height:60px; aspect-ratio:auto; margin-bottom:0; flex:none; }
+.product-mini-card .product-thumb svg{ width:24px; height:24px; }
+.product-mini-card .pmc-body{ flex:1; min-width:0; }
+.product-mini-card .pmc-body h3{ font-size:15px; margin-bottom:3px; }
+.product-mini-card .pmc-body p{ font-size:13px; color:var(--ink-soft); margin-bottom:8px; }
+.product-mini-card .product-spec{ padding-top:0; margin-bottom:0; border-top:none; font-size:12px; }
+
 /* ---- article / blog ---- */
 .article-card{ display:block; border-radius: var(--radius); overflow:hidden; border:1px solid var(--line); background:#fff; }
 .article-card:hover{ box-shadow: var(--shadow); transform: translateY(-3px); text-decoration:none; }
