@@ -370,6 +370,7 @@ table.spec tr:last-child td{ border-bottom:none; }
 
 .product-thumb{ aspect-ratio:4/3; border-radius:var(--radius); background:var(--surface); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
 .product-thumb svg{ width:40px; height:40px; color:var(--ink-faint); }
+.product-spec{ font-size:13px; font-weight:700; color:var(--ink); padding-top:14px; margin-bottom:18px; border-top:1px solid var(--line); }
 
 /* ---- article / blog ---- */
 .article-card{ display:block; border-radius: var(--radius); overflow:hidden; border:1px solid var(--line); background:#fff; }
@@ -426,6 +427,23 @@ body.modal-open{ overflow:hidden; }
 .solution-feature .sf-icon svg{ width:24px; height:24px; color:#fff; }
 .solution-feature h3{ font-size:19px; margin-bottom:10px; }
 .solution-feature p{ font-size:14px; color:var(--ink-soft); margin-bottom:20px; }
+
+/* ---- solution tile grid (home page) ---- */
+.solution-tile-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+@media (min-width:901px){ .solution-tile-grid > a:nth-child(3n+2){ margin-top:32px; } }
+@media (max-width:900px){ .solution-tile-grid{ grid-template-columns:repeat(2, 1fr); } }
+@media (max-width:560px){ .solution-tile-grid{ grid-template-columns:1fr; } }
+.solution-tile{ display:flex; flex-direction:column; border-radius:var(--radius-lg); overflow:hidden; background:#fff; border:1px solid var(--line); transition: box-shadow .2s var(--ease), transform .2s var(--ease); }
+.solution-tile:hover{ box-shadow:var(--shadow-lg); transform:translateY(-4px); text-decoration:none; }
+.solution-tile .st-media{ aspect-ratio:16/11; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+.solution-tile .st-media svg{ width:56px; height:56px; color:#fff; position:relative; z-index:1; }
+.solution-tile .st-media::after{ content:""; position:absolute; inset:0; background:radial-gradient(circle at 30% 20%, rgba(255,255,255,.16), transparent 60%); }
+.solution-tile .st-body{ padding:22px 22px 24px; display:flex; flex-direction:column; flex:1; }
+.solution-tile .st-body h3{ font-size:17.5px; margin:10px 0 8px; }
+.solution-tile .st-body p{ font-size:13.5px; color:var(--ink-soft); margin-bottom:16px; flex:1; }
+.st-grad-1{ background:linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%); }
+.st-grad-2{ background:linear-gradient(135deg, var(--navy-soft) 0%, var(--sky) 100%); }
+.st-grad-3{ background:linear-gradient(135deg, var(--navy-2) 0%, var(--navy-soft) 60%, var(--sky) 100%); }
 
 /* ---- full-width solution banner (Пациентам page) ---- */
 .solution-banner{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; border:1px solid var(--line); border-radius:var(--radius-lg); padding:40px; background:#fff; margin-bottom:24px; }
