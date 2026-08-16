@@ -452,9 +452,22 @@ body.modal-open{ overflow:hidden; }
 .solution-tile .st-body{ padding:22px 22px 24px; display:flex; flex-direction:column; flex:1; }
 .solution-tile .st-body h3{ font-size:17.5px; margin:10px 0 8px; }
 .solution-tile .st-body p{ font-size:13.5px; color:var(--ink-soft); margin-bottom:16px; flex:1; }
-.st-grad-1{ background:linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%); }
-.st-grad-2{ background:linear-gradient(135deg, var(--navy-soft) 0%, var(--sky) 100%); }
-.st-grad-3{ background:linear-gradient(135deg, var(--navy-2) 0%, var(--navy-soft) 60%, var(--sky) 100%); }
+/* ---- per-solution accent colors ---- */
+.solution-tile .st-media.sol-peacock,   .solution-banner .sb-media.sol-peacock  { background:#104A65; }
+.solution-tile .st-media.sol-blue,      .solution-banner .sb-media.sol-blue     { background:#074068; }
+.solution-tile .st-media.sol-sun,       .solution-banner .sb-media.sol-sun      { background:#FF601A; }
+.solution-tile .st-media.sol-water,     .solution-banner .sb-media.sol-water    { background:#25C9BA; }
+.solution-tile .st-media.sol-sand,      .solution-banner .sb-media.sol-sand     { background:#FFEBD8; }
+.solution-tile .st-media.sol-aquaverde, .solution-banner .sb-media.sol-aquaverde{ background:#A3C0BD; }
+.solution-tile .st-media.sol-orioles,   .solution-banner .sb-media.sol-orioles  { background:#FB4F14; }
+.solution-tile .st-media.sol-parchment, .solution-banner .sb-media.sol-parchment{ background:#E9D6BD; }
+.solution-tile .st-media.sol-night,     .solution-banner .sb-media.sol-night    { background:#021C26; }
+.solution-tile .st-media.sol-crest,     .solution-banner .sb-media.sol-crest    { background:#F9F8EF; }
+
+.solution-tile .st-media.sol-sand svg, .solution-tile .st-media.sol-aquaverde svg,
+.solution-tile .st-media.sol-parchment svg, .solution-tile .st-media.sol-crest svg,
+.solution-banner .sb-media.sol-sand svg, .solution-banner .sb-media.sol-aquaverde svg,
+.solution-banner .sb-media.sol-parchment svg, .solution-banner .sb-media.sol-crest svg{ color:var(--navy); opacity:1; }
 
 /* ---- full-width solution banner (Пациентам page) ---- */
 .solution-banner{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; border:1px solid var(--line); border-radius:var(--radius-lg); padding:40px; background:#fff; margin-bottom:24px; }
