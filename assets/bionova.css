@@ -6,7 +6,7 @@
 :root{
   /* ---- surfaces & ink ---- */
   --bg:            #FDFDFC;
-  --surface:       #F4F3EF;
+  --surface:       #FDFDFE;
   --surface-2:     #ECEAE3;
   --surface-3:     #E4E1D8;
   --card:          #FFFFFF;
@@ -17,19 +17,19 @@
   --line-strong:   #D4D1C7;
 
   /* ---- navy / accent ---- */
-  --navy:          #0B1E3A;
-  --navy-2:        #16305A;
-  --navy-soft:     #2E5C9A;
-  --sky:           #8FB6E0;
-  --sky-pale:      #DCE9F7;
-  --crystal-a:     #0B1E3A;
-  --crystal-b:     #2E5C9A;
-  --crystal-c:     #9FCBEF;
+  --navy:          #24929A;
+  --navy-2:        #175F64;
+  --navy-soft:     #24929A;
+  --sky:           #9ED7DC;
+  --sky-pale:      #E4F1F2;
+  --crystal-a:     #24929A;
+  --crystal-b:     #24929A;
+  --crystal-c:     #24929A;
 
   --accent-grad: linear-gradient(135deg, var(--crystal-a) 0%, var(--crystal-b) 55%, var(--crystal-c) 100%);
-  --accent-grad-soft: linear-gradient(135deg, rgba(11,30,58,.06) 0%, rgba(46,92,154,.10) 55%, rgba(159,203,239,.14) 100%);
-  --mesh-grad: radial-gradient(600px 320px at 85% 8%, rgba(46,92,154,.16), transparent 60%),
-               radial-gradient(520px 300px at 8% 92%, rgba(159,203,239,.18), transparent 60%);
+  --accent-grad-soft: linear-gradient(135deg, rgba(36,146,154,.06) 0%, rgba(36,146,154,.10) 55%, rgba(158,215,220,.14) 100%);
+  --mesh-grad: radial-gradient(600px 320px at 85% 8%, rgba(36,146,154,.16), transparent 60%),
+               radial-gradient(520px 300px at 8% 92%, rgba(158,215,220,.18), transparent 60%);
 
   --ok:            #1F7A4D;
   --warn:          #A85E00;
@@ -322,7 +322,7 @@ p.body{ font-size: 15.5px; color:var(--ink-soft); max-width: 62ch; }
   background: var(--surface); font-size:14.5px; font-family: inherit; color: var(--ink);
   transition: border-color .15s, box-shadow .15s;
 }
-.field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color: var(--navy-soft); box-shadow: 0 0 0 3px rgba(46,92,154,.15); background:#fff; }
+.field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color: var(--navy-soft); box-shadow: 0 0 0 3px rgba(36,146,154,.15); background:#fff; }
 .field textarea{ resize: vertical; min-height:96px; }
 .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
 @media (max-width:560px){ .field-row{ grid-template-columns:1fr; } }
@@ -501,7 +501,7 @@ body.modal-open{ overflow:hidden; }
 .testimonial-card.video .video-thumb{ position:relative; aspect-ratio:3/4; background:var(--accent-grad); display:flex; align-items:center; justify-content:center; cursor:pointer; }
 .testimonial-card.video .play-btn{ width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; border:none; cursor:pointer; box-shadow:var(--shadow); }
 .testimonial-card.video .play-btn svg{ width:18px; height:18px; color:var(--navy); margin-left:2px; }
-.testimonial-card.video .video-duration{ position:absolute; bottom:10px; right:10px; background:rgba(11,30,58,.65); color:#fff; font-size:11px; font-weight:650; padding:3px 8px; border-radius:6px; }
+.testimonial-card.video .video-duration{ position:absolute; bottom:10px; right:10px; background:rgba(36,146,154,.65); color:#fff; font-size:11px; font-weight:650; padding:3px 8px; border-radius:6px; }
 .testimonial-card.video .doc{ padding:16px 20px 20px; border-top:none; }
 
 /* ---- before / after ---- */
