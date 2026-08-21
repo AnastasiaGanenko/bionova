@@ -383,6 +383,22 @@ table.spec tr:last-child td{ border-bottom:none; }
 .product-mini-card .pmc-body p{ font-size:13px; color:var(--ink-soft); margin-bottom:8px; }
 .product-mini-card .product-spec{ padding-top:0; margin-bottom:0; border-top:none; font-size:12px; }
 
+/* ---- product feature card (products.html category blocks) ---- */
+.product-feature-card{ display:flex; flex-direction:column; padding:0; overflow:hidden; }
+.product-feature-card .pfc-media{ aspect-ratio:16/9; background:var(--surface); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--line); }
+.product-feature-card .pfc-media svg{ width:32px; height:32px; color:var(--ink-faint); transition:transform .3s var(--ease); }
+.product-feature-card:hover .pfc-media svg{ transform:scale(1.08); }
+.product-feature-card .pfc-body{ padding:24px 26px 26px; }
+.product-feature-card .pfc-name{ font-size:20px; font-weight:700; color:var(--ink); letter-spacing:-.01em; margin-bottom:2px; }
+.product-feature-card .pfc-type{ font-size:13px; color:var(--ink-faint); margin-bottom:14px; }
+.product-feature-card .pfc-desc{ font-size:14px; color:var(--ink-soft); line-height:1.55; margin-bottom:20px; }
+.product-feature-card .pfc-footer{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:16px; border-top:1px solid var(--line); }
+.product-feature-card .pfc-spec{ font-size:13px; font-weight:700; color:var(--ink); }
+.product-feature-card .pfc-cta{ display:inline-flex; align-items:center; gap:6px; font-size:13.5px; font-weight:650; color:var(--navy); transition:gap .2s var(--ease), color .2s var(--ease); }
+.product-feature-card .pfc-cta svg{ width:14px; height:14px; transition:transform .2s var(--ease); }
+.product-feature-card:hover .pfc-cta{ color:var(--navy-2); gap:9px; }
+.product-feature-card:hover .pfc-cta svg{ transform:translateX(2px); }
+
 /* ---- article / blog ---- */
 .article-card{ display:block; border-radius: var(--radius); overflow:hidden; border:1px solid var(--line); background:#fff; }
 .article-card:hover{ box-shadow: var(--shadow); transform: translateY(-3px); text-decoration:none; }
