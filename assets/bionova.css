@@ -293,6 +293,9 @@ p.body{ font-size: 15.5px; color:var(--ink-soft); max-width: 62ch; }
 .tl-step h3{ font-size:17px; margin-bottom:6px; }
 .tl-step p{ font-size:14.5px; color: var(--ink-soft); max-width:56ch; }
 
+.timeline.compact .tl-step{ padding-bottom:34px; }
+.timeline.compact .tl-step:last-child{ padding-bottom:0; }
+
 .hz-timeline{ display:grid; grid-template-columns:repeat(3, 1fr); gap:32px 24px; }
 .hz-step{ min-width:0; padding:0; position:relative; }
 .hz-step .dot{ width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; margin-bottom:16px; }
