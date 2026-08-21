@@ -593,3 +593,65 @@ body.modal-open{ overflow:hidden; }
 @media (max-width:640px){ .point-trio{ grid-template-columns:1fr; } }
 
 .section-statement{ text-align:center; font-size:20px; font-weight:650; color:var(--ink); max-width:40ch; margin:40px auto 0; }
+
+/* ---- system diagram (hub + connected inputs) ---- */
+.system-diagram{
+  position:relative;
+  max-width:800px;
+  margin:64px auto 0;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    ".        research  ."
+    "doctors  hub        education"
+    ".        therapy    .";
+  gap:8px 16px;
+  min-height:560px;
+}
+.sys-lines{ position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; }
+.sys-lines line{ stroke:var(--ink-faint); stroke-opacity:.4; stroke-width:1.5; vector-effect:non-scaling-stroke; transition:stroke .25s var(--ease), stroke-opacity .25s var(--ease), stroke-width .25s var(--ease); }
+
+.sys-node{ position:relative; z-index:1; text-align:center; align-self:center; justify-self:center; padding:6px; transition:transform .2s var(--ease); max-width:200px; }
+.sys-node .sys-num{ display:block; font-size:11px; font-weight:700; color:var(--navy-soft); letter-spacing:.08em; margin-bottom:6px; }
+.sys-node h4{ font-size:15px; margin-bottom:4px; }
+.sys-node .sys-tag{ display:block; font-size:12px; font-weight:650; color:var(--navy); margin-bottom:6px; }
+.sys-node p{ font-size:12.5px; color:var(--ink-faint); line-height:1.45; }
+.sys-node:hover{ transform:translateY(-2px); }
+
+.sys-research{ grid-area:research; }
+.sys-doctors{ grid-area:doctors; }
+.sys-education{ grid-area:education; }
+.sys-therapy{ grid-area:therapy; }
+
+.sys-hub{
+  grid-area:hub;
+  position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:center;
+  width:172px; height:172px; margin:0 auto;
+  border-radius:50%;
+  background:#fff;
+  border:1.5px solid var(--line-strong);
+  box-shadow:var(--shadow-sm);
+  text-align:center;
+  padding:16px;
+  transition:box-shadow .25s var(--ease), border-color .25s var(--ease);
+}
+.sys-hub-label{ font-size:15px; font-weight:700; color:var(--navy); line-height:1.3; }
+
+.system-diagram:has(.sys-research:hover) .line-research,
+.system-diagram:has(.sys-doctors:hover) .line-doctors,
+.system-diagram:has(.sys-education:hover) .line-education,
+.system-diagram:has(.sys-therapy:hover) .line-therapy{ stroke:var(--navy); stroke-opacity:1; stroke-width:2; }
+.system-diagram:has(.sys-node:hover) .sys-hub{ box-shadow:var(--shadow); border-color:var(--navy-soft); }
+
+@media (max-width:900px){
+  .system-diagram{ display:flex; flex-direction:column; align-items:center; gap:0; min-height:0; max-width:340px; }
+  .sys-lines{ display:none; }
+  .sys-node{ text-align:left; max-width:none; width:100%; padding:0 0 28px 24px; border-left:2px dotted var(--line-strong); margin-left:12px; }
+  .sys-research{ order:1; }
+  .sys-doctors{ order:2; }
+  .sys-education{ order:3; }
+  .sys-therapy{ order:4; }
+  .sys-hub{ order:5; margin-top:8px; }
+}
