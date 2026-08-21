@@ -180,22 +180,25 @@
 <section class="section">
   <div class="container">
     <div class="section-head center">
-      <div class="kicker" style="justify-content:center;">Как устроено решение</div>
+      <div class="kicker" style="justify-content:center;">Три шага персонализированного протокола</div>
       <h2 class="h2">Не один препарат, а продуманная система</h2>
       <p class="body" style="margin:14px auto 0;">Каждое решение — это несколько продуктов, которые работают вместе и подбираются под вашу конкретную цель, а не готовый набор «для всех».</p>
     </div>
     <div class="grid grid-3">
       <div class="card hoverable" data-reveal>
+        <div class="tag soft" style="margin-bottom:16px;">Шаг 1</div>
         <div class="card-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="17" r="3" stroke="currentColor" stroke-width="1.5"/></svg></div>
         <h3>Несколько продуктов вместе</h3>
         <p>Компоненты дополняют друг друга — так эффект заметнее, чем от одного средства.</p>
       </div>
       <div class="card hoverable" data-reveal>
+        <div class="tag soft" style="margin-bottom:16px;">Шаг 2</div>
         <div class="card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 2h6M10 2v6l-5 10a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-10V2" stroke="currentColor" stroke-width="1.5"/></svg></div>
         <h3>Подбирается под вас</h3>
         <p>Врач определяет состав и дозирование по вашей ситуации, а не по шаблону.</p>
       </div>
       <div class="card hoverable" data-reveal>
+        <div class="tag soft" style="margin-bottom:16px;">Шаг 3</div>
         <div class="card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 21 6v6c0 6-4 9-9 10-5-1-9-4-9-10V6l9-4Z" stroke="currentColor" stroke-width="1.5"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.5"/></svg></div>
         <h3>Под наблюдением врача</h3>
         <p>Программа при необходимости корректируется по ходу терапии — вы не остаётесь один на один с решением.</p>
@@ -280,11 +283,29 @@
   </div>
 </section>
 
-<section class="container" style="margin:96px auto;">
-  <div class="cta-band">
-    <div class="cta-band-inner">
-      <div><h2>Готовы начать?</h2><p>Оставьте заявку — мы свяжем вас с врачом, который подберёт решение под вашу цель.</p></div>
-      <div class="actions"><a class="btn btn-white" href="for-patients.html#consultation" data-open-consultation>Связаться с врачом</a></div>
+<!-- ===================== PATIENT PROMO FORM ===================== -->
+<section class="section" id="consult-form">
+  <div class="container">
+    <div class="promo-card" data-reveal>
+      <div class="promo-text">
+        <h2 class="h2" style="margin-bottom:16px;">Хотите больше энергии, лучше спать или снизить вес?</h2>
+        <p class="body">Оставьте номер — врач подберёт персональную программу Seqthera под вашу цель.</p>
+      </div>
+      <div class="promo-form">
+        <div class="kicker">Запрос консультации</div>
+        <h3 style="font-size:19px; margin-bottom:22px;">Расскажем, что именно поможет улучшить самочувствие</h3>
+        <form data-fake-submit data-success-target="patientFormSuccess">
+          <div class="field"><label>Имя</label><input type="text" required></div>
+          <div class="field"><label>Телефон</label><input type="tel" required></div>
+          <div class="field"><label>Email</label><input type="email"></div>
+          <button class="btn btn-primary btn-block" type="submit">Получить консультацию</button>
+        </form>
+        <div class="form-success" id="patientFormSuccess">
+          <div class="check"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11l4.5 4.5L18 6" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h4>Заявка отправлена</h4>
+          <p>Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

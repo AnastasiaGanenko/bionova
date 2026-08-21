@@ -533,3 +533,40 @@ body.modal-open{ overflow:hidden; }
 .ba-body .tags{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; }
 .ba-body p{ font-size:13px; color:var(--ink-soft); }
 .ba-disclaimer{ font-size:12px; color:var(--ink-faint); max-width:64ch; margin-top:24px; }
+
+/* ---- photo placeholder (used where real photography will go later) ---- */
+.photo-placeholder{ aspect-ratio:4/3; border-radius:var(--radius-lg); border:2px dashed var(--line-strong); background:var(--surface); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:var(--ink-faint); text-align:center; padding:20px; }
+.photo-placeholder svg{ width:38px; height:38px; opacity:.55; }
+.photo-placeholder span{ font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+
+/* ---- promo split card (value prop + photo / value prop + form) ---- */
+.promo-card{ display:grid; grid-template-columns:1fr 1fr; border-radius:var(--radius-lg); overflow:hidden; background:var(--sky-pale); }
+.promo-card .promo-text{ padding:48px; align-self:center; }
+.promo-card .promo-media{ border-radius:0; border:none; aspect-ratio:auto; min-height:340px; background:#fff; }
+.promo-card .promo-form{ background:#fff; padding:44px; }
+@media (max-width:900px){ .promo-card{ grid-template-columns:1fr; } .promo-card .promo-text, .promo-card .promo-form{ padding:32px; } .promo-card .promo-media{ min-height:220px; } }
+
+/* ---- patient-journey icon row (home) ---- */
+.pj-icon-grid{ display:grid; grid-template-columns:repeat(6, 1fr); gap:14px; }
+.pj-icon-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:20px 14px; text-align:center; }
+.pj-icon-card .pj-icon{ width:42px; height:42px; border-radius:12px; background:var(--sky-pale); display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
+.pj-icon-card .pj-icon svg{ width:20px; height:20px; color:var(--navy); }
+.pj-icon-card h4{ font-size:13px; margin-bottom:4px; }
+.pj-icon-card p{ font-size:11.5px; color:var(--ink-faint); line-height:1.4; }
+@media (max-width:900px){ .pj-icon-grid{ grid-template-columns:repeat(3, 1fr); } }
+@media (max-width:560px){ .pj-icon-grid{ grid-template-columns:repeat(2, 1fr); } }
+
+/* ---- numbered mini-steps (paired with a photo placeholder) ---- */
+.pj-step{ display:flex; gap:16px; margin-bottom:22px; }
+.pj-step:last-of-type{ margin-bottom:28px; }
+.pj-step .pj-num{ font-size:13px; font-weight:700; color:var(--navy); flex:none; width:30px; padding-top:1px; }
+.pj-step h4{ font-size:15.5px; margin-bottom:4px; }
+.pj-step p{ font-size:13.5px; color:var(--ink-soft); }
+
+/* ---- catalog category blocks ---- */
+.cat-block{ margin-bottom:52px; }
+.cat-block:last-child{ margin-bottom:0; }
+.cat-title{ font-size:19px; margin-bottom:22px; padding-bottom:14px; border-bottom:1px solid var(--line); }
+
+/* ---- in-page tab pills (anchor navigation) ---- */
+.tab-pills{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:8px; }
