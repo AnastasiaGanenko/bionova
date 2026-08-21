@@ -540,10 +540,11 @@ body.modal-open{ overflow:hidden; }
 .photo-placeholder span{ font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
 
 /* ---- promo split card (value prop + photo / value prop + form) ---- */
-.promo-card{ display:grid; grid-template-columns:1fr 1fr; border-radius:var(--radius-lg); overflow:hidden; background:var(--sky-pale); }
+.promo-card{ display:grid; grid-template-columns:1fr 1fr; border-radius:var(--radius-lg); overflow:hidden; background:var(--sky-pale); border:1px solid var(--line); box-shadow:var(--shadow-lg); }
 .promo-card .promo-text{ padding:48px; align-self:center; }
 .promo-card .promo-media{ border-radius:0; border:none; aspect-ratio:auto; min-height:340px; background:#fff; }
-.promo-card .promo-form{ background:#fff; padding:44px; }
+.promo-card .promo-form{ background:#fff; padding:44px; border-left:1px solid var(--line); }
+@media (max-width:900px){ .promo-card .promo-form{ border-left:none; border-top:1px solid var(--line); } }
 @media (max-width:900px){ .promo-card{ grid-template-columns:1fr; } .promo-card .promo-text, .promo-card .promo-form{ padding:32px; } .promo-card .promo-media{ min-height:220px; } }
 
 /* ---- patient-journey icon row (home) ---- */
