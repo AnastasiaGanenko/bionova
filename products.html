@@ -60,9 +60,27 @@
   </div>
 </header>
 
+<nav class="product-subnav" id="productSubnav">
+  <div class="container psn-inner">
+    <span class="psn-label">Продукты</span>
+    <div class="psn-select-wrap" id="psnSelectWrap">
+      <select class="psn-select" id="productCategorySelect" aria-label="Перейти к категории">
+        <option value="">Все категории</option>
+        <option value="cat-recovery">Восстановление</option>
+        <option value="cat-metabolism">Метаболизм</option>
+        <option value="cat-longevity">Долголетие</option>
+        <option value="cat-sleep">Сон</option>
+        <option value="cat-immunity">Иммунитет</option>
+        <option value="cat-hormones">Гормоны</option>
+      </select>
+      <svg viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.4"/></svg>
+    </div>
+  </div>
+</nav>
+
 <section class="section tight">
   <div class="container">
-    <div class="cat-block">
+    <div class="cat-block" id="cat-recovery">
       <h3 class="cat-title">Восстановление</h3>
       <div class="grid grid-3">
         <a class="card hoverable product-feature-card" href="product-detail.html">
@@ -115,7 +133,7 @@
         </a>
       </div>
     </div>
-    <div class="cat-block">
+    <div class="cat-block" id="cat-metabolism">
       <h3 class="cat-title">Метаболизм</h3>
       <div class="grid grid-3">
         <a class="card hoverable product-feature-card" href="product-detail.html">
@@ -180,7 +198,7 @@
         </a>
       </div>
     </div>
-    <div class="cat-block">
+    <div class="cat-block" id="cat-longevity">
       <h3 class="cat-title">Долголетие</h3>
       <div class="grid grid-3">
         <a class="card hoverable product-feature-card" href="product-detail.html">
@@ -221,7 +239,7 @@
         </a>
       </div>
     </div>
-    <div class="cat-block">
+    <div class="cat-block" id="cat-sleep">
       <h3 class="cat-title">Сон</h3>
       <div class="grid grid-3">
         <a class="card hoverable product-feature-card" href="product-detail.html">
@@ -298,7 +316,7 @@
         </a>
       </div>
     </div>
-    <div class="cat-block">
+    <div class="cat-block" id="cat-immunity">
       <h3 class="cat-title">Иммунитет</h3>
       <div class="grid grid-3">
         <a class="card hoverable product-feature-card" href="product-detail.html">
@@ -351,7 +369,7 @@
         </a>
       </div>
     </div>
-    <div class="cat-block">
+    <div class="cat-block" id="cat-hormones">
       <h3 class="cat-title">Гормоны</h3>
       <div class="grid grid-3">
         <a class="card hoverable product-feature-card" href="product-detail.html">
@@ -453,5 +471,20 @@
 
 <div class="toast" id="toast"></div>
 <script src="assets/bionova.js"></script>
+<script>
+(function(){
+  var select = document.getElementById('productCategorySelect');
+  var wrap = document.getElementById('psnSelectWrap');
+  if(!select) return;
+  select.addEventListener('change', function(){
+    var id = select.value;
+    wrap.classList.toggle('active', !!id);
+    if(!id) return;
+    var target = document.getElementById(id);
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    select.blur();
+  });
+})();
+</script>
 </body>
 </html>
